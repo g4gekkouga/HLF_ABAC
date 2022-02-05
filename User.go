@@ -90,7 +90,7 @@ func registerUAPub(ctx contractapi.TransactionContextInterface, userID string, u
 
 	ctx.GetStub().SetEvent("registerUAPub", userJSON)
 
-	return ctx.GetStub().GetTxID(), ctx.GetStub().PutState(userID, registerUAPub)
+	return ctx.GetStub().GetTxID(), ctx.GetStub().PutState(userID, userJSON)
 }
 
 func updateUAPub(ctx contractapi.TransactionContextInterface, userID string, userName string, attributes string) (string, error) {
@@ -127,13 +127,14 @@ func updateUAPub(ctx contractapi.TransactionContextInterface, userID string, use
 	}
 
 	userJSON, err := json.Marshal(user)
+
 	if err != nil {
 		return "", err
 	}
 
 	ctx.GetStub().SetEvent("updateUAPub", userJSON)
 
-	return ctx.GetStub().GetTxID(), ctx.GetStub().PutState(userID, registerUAPub)
+	return ctx.GetStub().GetTxID(), ctx.GetStub().PutState(userID, userJSON)
 }
 
 func getUAPub(ctx contractapi.TransactionContextInterface, userID string) *User {
