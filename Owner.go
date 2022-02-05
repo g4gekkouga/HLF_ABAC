@@ -99,7 +99,7 @@ func updateRAPub(ctx contractapi.TransactionContextInterface, resourceID string,
 		Attributes: attrsmap,
 	}
 
-	resourceAttrJSON, err := json.Marshal(resourceAttr)
+	resourceAttrJSON, err = json.Marshal(resourceAttr)
 	if err != nil {
 		return "", err
 	}
@@ -210,7 +210,7 @@ func updateRAPriv(ctx contractapi.TransactionContextInterface, resourceID string
 		Attributes: attrsmap,
 	}
 
-	resourceAttrJSON, err := json.Marshal(resourceAttr)
+	resourceAttrJSON, err = json.Marshal(resourceAttr)
 	if err != nil {
 		return "", err
 	}

@@ -80,7 +80,7 @@ func updateResource(ctx contractapi.TransactionContextInterface, resourceID stri
 		Data:       data,
 	}
 
-	resourceJSON, err := json.Marshal(resource)
+	resourceJSON, err = json.Marshal(resource)
 	if err != nil {
 		return "", err
 	}

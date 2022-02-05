@@ -13,10 +13,11 @@ type Policy struct {
 	UserAttr     map[string]string `json:"userAttr"`
 	ResourceAttr map[string]string `json:"resourceAttr"`
 	EnvAttr      map[string]string `json:"envAttr"`
+	Operation    string            `json:"op"`
 	Rules        map[string]string `json:"rules"`
 }
 
-func registerPolicy(ctx contractapi.TransactionContextInterface, policyID string, userAttr string, resourceAttr string, envAttr string, rules string) (string, error) {
+func registerPolicy(ctx contractapi.TransactionContextInterface, policyID string, userAttr string, resourceAttr string, envAttr string, operation string, rules string) (string, error) {
 
 	if len(policyID) == 0 {
 		return "", fmt.Errorf("Please enter valid Policy ID")
@@ -63,6 +64,7 @@ func registerPolicy(ctx contractapi.TransactionContextInterface, policyID string
 		UserAttr:     userAttrsMap,
 		ResourceAttr: resourceAttrsMap,
 		EnvAttr:      envAttrsMap,
+		Operation:    operation,
 		Rules:        rulesMap,
 	}
 

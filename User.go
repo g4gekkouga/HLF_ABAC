@@ -126,7 +126,7 @@ func updateUAPub(ctx contractapi.TransactionContextInterface, userID string, use
 		Attributes: attrsmap,
 	}
 
-	userJSON, err := json.Marshal(user)
+	userJSON, err = json.Marshal(user)
 
 	if err != nil {
 		return "", err
