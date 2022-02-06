@@ -6,12 +6,12 @@ This is a Golang Package to provide necessary methods for supporting fully funct
 
 ### Resource Struct
 
-type Resource struct {
-	ResourceID string `json:"resourceID"`
-	OwnerID    string `json:"ownerID"`
-	OwnerKey   string `json:ownerKey`
-	Data       string `json:"data"`
-}
+type Resource struct {  
+	ResourceID string `json:"resourceID"`  
+	OwnerID    string `json:"ownerID"`  
+	OwnerKey   string `json:ownerKey`  
+	Data       string `json:"data"`  
+}  
 
 ### addResource() and updateResource()
 
