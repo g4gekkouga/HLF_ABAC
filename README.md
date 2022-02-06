@@ -2,7 +2,7 @@
 
 This is a Golang Package to provide necessary methods for supporting fully functional Attribute-Based Access Control in Hyperledger Fabric. Fabric chaincodes can use these methods directly by importing this package.
 
-## Methods for Resource
+## Defined Structures
 
 ### Resource Struct Fields
 
@@ -10,6 +10,15 @@ This is a Golang Package to provide necessary methods for supporting fully funct
 2. OwnerID - string
 3. OwnerKey - string
 4. Data - string  
+
+### Resource Attributes Struct Fields
+
+1. ResourceID - string
+2. OwnerID - string
+3. OwnerKey - string
+4. Attribures - map[string]string 
+5. 
+## Methods for Resource
 
 ### addResource() and updateResource()
 
@@ -42,6 +51,4 @@ Output :
 ## Methods for Policy
 
 ## Methods for Decision Unit
-
-## Defined Structures
 
