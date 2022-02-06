@@ -17,7 +17,22 @@ This is a Golang Package to provide necessary methods for supporting fully funct
 2. OwnerID - string
 3. OwnerKey - string
 4. Attribures - map[string]string 
-5. 
+
+### User Attribues Struct Fields
+
+1. UserID - string
+2. UserName - string
+3. Attributes - map[string]string
+
+### Policy Struct Fields
+
+1. PolicyID - string
+2. UserAttr - map[string]string 
+3. ResourceAttr - map[string]string 
+4. EnvAttr - map[string]string 
+5. Operation - string
+6. Rules - map[string]string
+
 ## Methods for Resource
 
 ### addResource() and updateResource()
