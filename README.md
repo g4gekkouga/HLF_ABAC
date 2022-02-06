@@ -4,14 +4,12 @@ This is a Golang Package to provide necessary methods for supporting fully funct
 
 ## Methods for Resource
 
-### Resource Struct
+### Resource Struct Fields
 
-type Resource struct {  
-	ResourceID string `json:"resourceID"`  
-	OwnerID    string `json:"ownerID"`  
-	OwnerKey   string `json:ownerKey`  
-	Data       string `json:"data"`  
-}  
+1. ResourceID - string
+2. OwnerID - string
+3. OwnerKey - string
+4. Data - string  
 
 ### addResource() and updateResource()
 
