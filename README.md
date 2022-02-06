@@ -83,7 +83,7 @@ Output:
 2. Error if any - error
 
 
-### registerRAPub() and updateRAPub()
+### registerRAPriv() and updateRAPriv()
 
 Input:  
 1. Context - contractapi.TransactionContextInterface  
@@ -109,7 +109,89 @@ Output:
 
 ## Methods for User Attributes
 
+### registerUAPub() and updateUAPub()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. User ID - string
+3. User Name - string
+4. Attributes - string : Key-value pairs in 'key:value' format, seperated by ','
+
+Output:  
+1. Transaction ID - string
+2. Error if any - error
+
+### getUAPub()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. User ID - string
+
+Output:  
+1. User Attributes - Type: UserAttr Struct
+2. Error if any - error
+
+### getUAPriv()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface
+2. Attribute Name - string
+
+Output:  
+1. Attribute Value - string
+2. Error if any - error
+
 ## Methods for Policy
 
+### registerPolicy() and updatePolicy()
+
+Input:
+1. Context - contractapi.TransactionContextInterface
+2. Policy ID - string
+3. User Attributes - string : Required User Attribute names separated by ','
+4. Resource Attributes - string : Required Resource Attribute names separated by ','
+5. Environment Attributes - string : Required Environment Attribute names separated by ','
+6. Operation - string
+7. Rules - string : Key-value pairs in 'key:value' format, seperated by ','
+
+Output:
+1. Transaction ID - string
+2. Error if any - error
+
+## getPolicy()
+
+Input:
+1. Context - contractapi.TransactionContextInterface
+2. Policy ID - string
+
+Output:
+1. Policy - Type: Policy Struct
+2. Error if any - error
+
+## getPolicySet()
+
+Input:
+1. Context - contractapi.TransactionContextInterface
+
+Output:
+1. All Policies - []Policy
+2. Error if any - error
+
 ## Methods for Decision Unit
+
+### validateAccess() 
+
+Input:  
+1. Context - contractapi.TransactionContextInterface
+2. Hash(User ID, User Priv Key) - string
+3. Resource ID - string
+4. Operation - string
+5. Private Collection - string
+
+Output:
+1. Resource - Type: Resource Struct
+2. Error if any - error
+
+## Note
+The current version of the package supports only minimal use case required for latency testing purpose of proposed approach. We are currently in development more robust version to support generalized use cases and error support for boundary situation.
 
