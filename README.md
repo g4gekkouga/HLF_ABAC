@@ -37,29 +37,75 @@ This is a Golang Package to provide necessary methods for supporting fully funct
 
 ### addResource() and updateResource()
 
-Input : 
+Input: 
 1. Context - contractapi.TransactionContextInterface  
 2. Resource ID - string
 3. Resource Data - string
 4. Private Collection - string
 
-Output : 
+Output: 
 1. Transaction ID - string
 2. Error if any - error
 
 ### getResource()
 
-Input : 
+Input: 
 1. Context - contractapi.TransactionContextInterface  
 2. Resource ID - string
 4. Private Collection - string
 
-Output : 
+Output: 
 1. Resource - Type: Resource Struct
 2. Error if any - error
 
 
-## Methods for Resource Attributes
+## Methods for Resource Attributes  
+
+### registerRAPub() and updateRAPub()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. Resource ID - string
+3. Attributes - string : Key-value pairs in 'key:value' format, seperated by ','
+
+Output:  
+1. Transaction ID - string
+2. Error if any - error
+
+### getRAPub()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. Resource ID - string
+
+Output:  
+1. Resource Attributes - Type: ResourceAttr Struct
+2. Error if any - error
+
+
+### registerRAPub() and updateRAPub()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. Resource ID - string
+3. Attributes - string : Key-value pairs in 'key:value' format, seperated by ','
+4. Private Collection - string
+
+Output:  
+1. Transaction ID - string
+2. Error if any - error
+
+### getRAPriv()
+
+Input:  
+1. Context - contractapi.TransactionContextInterface  
+2. Resource ID - string
+3. Private Collection - string
+
+Output:  
+1. Resource Attributes - Type: ResourceAttr Struct
+2. Error if any - error
+
 
 ## Methods for User Attributes
 
